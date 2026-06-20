@@ -1,1 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Pacifico&display=swap');
 
+:root {
+  --black: #080812;
+  --navy: #10101d;
+  --purple: #25112f;
+  --pink: #f2529b;
+  --hot-pink: #ff3f91;
+  --lavender: #a56bff;
+  --cream: #fff1df;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--black);
+  color: var(--white);
+}
+
+h1,
+h2,
+h3,
+.logo,
+.header-btn,
+.primary-btn,
+button {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+h2 {
+  color: var(--pink);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 1.5rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem 5%;
+  background: rgba(8, 8, 18, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(242, 82, 155, 0.25);
+}
+
+.logo,
+.footer-logo {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 0.9;
+}
+
+.logo span,
+.footer-logo span {
+  display: inline-block;
+  font-family: "Pacifico", cursive;
+  color: var(--pink);
+  font-size: 1.7rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.logo em,
+.footer-logo em {
+  color: var(--lavender);
+  font-style: normal;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.nav a:hover {
+  color: var(--pink);
+}
+
+.header-btn,
+.primary-btn,
+.rsvp-form button {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--pink), var(--hot-pink));
+  color: var(--black);
+  text-decoration: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 0.35rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 88vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 8rem 5%;
+  background:
+    linear-gradient(rgba(8, 8, 18, 0.35), rgba(8, 8, 18, 0.95)),
+    url("https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=2000&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.eyebrow,
+.tagline,
+.details {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(4rem, 13vw, 11rem);
+  line-height: 0.8;
+}
+
+.hero h1 span {
+  display: block;
+  font-family: "Pacifico", cursive;
+  color: var(--pink);
+  text-transform: none;
+  letter-spacing: 0;
+  text-shadow: 0 0 25px rgba(242, 82, 155, 0.8);
+}
+
+.hero h1 em {
+  color: var(--lavender);
+  font-style: normal;
+}
+
+.section-light {
+  background: var(--cream);
+  color: var(--black);
+}
+
+.section-dark {
+  background:
+    radial-gradient(circle at top right, rgba(242, 82, 155, 0.18), transparent 30%),
+    linear-gradient(135deg, var(--black), var(--purple));
+  color: var(--white);
+}
+
+.about,
+.schedule {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 5rem 8%;
+}
+
+.illustration,
+.cocktail {
+  font-size: clamp(6rem, 12vw, 12rem);
+  color: var(--pink);
+  text-align: center;
+  filter: drop-shadow(0 0 18px rgba(242, 82, 155, 0.45));
+}
+
+.event-info {
+  border-left: 1px solid rgba(242, 82, 155, 0.35);
+  padding-left: 2rem;
+}
+
+.event-info strong {
+  color: var(--pink);
+  text-transform: uppercase;
+}
+
+.experience,
+.why,
+.faq {
+  padding: 5rem 8%;
+  text-align: center;
+}
+
+.experience-grid,
+.why-grid,
+.faq-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.experience-grid {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.experience article {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+}
+
+.experience article:last-child {
+  border-right: none;
+}
+
+.icon {
+  font-size: 2.8rem;
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+.experience h3,
+.why h3,
+.faq h3 {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.timeline p {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  margin: 0.7rem 0;
+}
+
+.timeline span {
+  color: var(--pink);
+  font-weight: 800;
+}
+
+.why-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.why article,
+.faq article {
+  border: 1px solid rgba(242, 82, 155, 0.35);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.rsvp {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  background: linear-gradient(135deg, var(--purple), var(--black));
+}
+
+.rsvp-image {
+  min-height: 480px;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(rgba(8, 8, 18, 0.25), rgba(8, 8, 18, 0.85)),
+    url("https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.rsvp-image p {
+  font-family: "Pacifico", cursive;
+  color: var(--pink);
+  font-size: clamp(3rem, 6vw, 6rem);
+  text-shadow: 0 0 18px rgba(242, 82, 155, 0.9);
+}
+
+.rsvp-form {
+  padding: 5rem 8%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+label {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+}
+
+input,
+select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(242, 82, 155, 0.35);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 0.35rem;
+}
+
+.rsvp-form button {
+  width: 100%;
+  margin: 1.5rem 0 0.7rem;
+}
+
+.faq-grid {
+  grid-template-columns: repeat(5, 1fr);
+  text-align: left;
+}
+
+footer {
+  padding: 3rem 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: var(--black);
+  border-top: 1px solid rgba(242, 82, 155, 0.35);
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    display: none;
+  }
+
+  .about,
+  .schedule,
+  .rsvp {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-grid,
+  .why-grid,
+  .faq-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience article {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    align-items: flex-start;
+  }
+
+  .header-btn {
+    display: none;
+  }
+
+  .hero {
+    min-height: 90vh;
+    padding: 6rem 1.5rem;
+  }
+
+  .about,
+  .schedule,
+  .experience,
+  .why,
+  .faq,
+  .rsvp-form {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .experience-grid,
+  .why-grid,
+  .faq-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
