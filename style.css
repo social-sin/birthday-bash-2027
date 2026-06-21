@@ -400,6 +400,7 @@ p {
   text-align: center;
   align-self: center;
   filter: drop-shadow(0 0 16px rgba(242, 82, 155, 0.35));
+  transform: translateY(-20px)
 }
 
 .schedule h2 {
@@ -414,7 +415,6 @@ p {
   gap: 2rem;
   align-items: center;
   margin: 0.75rem 0;
-  white-space: nowrap;
 }
 
 .timeline p::before {
@@ -426,11 +426,14 @@ p {
 }
 
 .timeline span {
+  width: 120px;
+  display: inline-block;
+  text-align: right;
+
   color: var(--pink);
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.35rem;
   letter-spacing: 0.06em;
-  white-space: nowrap;
 }
 
 .timeline span::after {
