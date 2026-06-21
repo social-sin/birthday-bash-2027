@@ -349,22 +349,10 @@ p {
   overflow: hidden;
   min-height: 430px;
   display: grid;
-  grid-template-columns: 320px minmax(420px, 560px) minmax(280px, 360px);
-  gap: 4rem;
+  grid-template-columns: minmax(360px, 420px) minmax(430px, 560px) minmax(280px, 360px);
+  gap: 3.5rem;
   align-items: center;
-  padding: 4rem 8%;
-}
-
-.about-art {
-  position: absolute;
-  left: -70px;
-  bottom: -35px;
-  width: 420px;
-  height: 420px;
-  background: url("./assets/palm-tree.png") no-repeat bottom left;
-  background-size: contain;
-  pointer-events: none;
-  z-index: 0;
+  padding: 4rem 7%;
 }
 
 .about-content {
@@ -373,16 +361,22 @@ p {
   z-index: 1;
 }
 
-.about-content p {
-  max-width: 560px;
+.about-art {
+  position: absolute;
+  left: -95px;
+  bottom: -55px;
+  width: 470px;
+  height: 470px;
+  background: url("./assets/palm-tree.png") no-repeat bottom left;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.event-info {
-  grid-column: 3;
-  position: relative;
-  z-index: 1;
-  border-left: 1px solid rgba(242, 82, 155, 0.35);
-  padding-left: 2rem;
+.about-content p {
+  max-width: 520px;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .schedule-art {
@@ -395,13 +389,11 @@ p {
 }
 
 .event-info {
+  grid-column: 3;
+  position: relative;
+  z-index: 1;
   border-left: 1px solid rgba(242, 82, 155, 0.35);
   padding-left: 2rem;
-}
-
-.event-info strong {
-  color: var(--pink);
-  text-transform: uppercase;
 }
 
 /* Experience + Why + FAQ */
