@@ -239,11 +239,35 @@ line-height: 1.45;
 color: var(--white);
 }
 
+.venue-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+
+  border: 1px solid rgba(242, 82, 155, 0.35);
+
+  box-shadow:
+    0 0 24px rgba(165, 107, 255, 0.16),
+    0 0 40px rgba(242, 82, 155, 0.12);
+}
+
+.venue-image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(165, 107, 255, 0.10),
+      rgba(242, 82, 155, 0.08)
+    );
+
+  pointer-events: none;
+}
+
 .venue-image {
-width: 100%;
-display: block;
-margin-top: 2rem;
-border: 1px solid rgba(242, 82, 155, 0.28);
+  width: 100%;
+  display: block;
 }
 
 /* Calendar Buttons */
