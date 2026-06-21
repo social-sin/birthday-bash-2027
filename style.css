@@ -41,6 +41,22 @@ body {
   vertical-align: top;
 }
 
+.age-mark {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.15em;
+}
+
+.age-sparkle {
+  color: var(--pink);
+  font-size: 1.15em;
+  line-height: 1;
+  transform: translateY(-0.25em);
+  text-shadow:
+    0 0 8px rgba(242, 82, 155, 0.65),
+    0 0 18px rgba(242, 82, 155, 0.35);
+}
+
 h1,
 h2,
 h3,
