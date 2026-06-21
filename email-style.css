@@ -104,7 +104,7 @@ overflow: hidden;
 .logo-top {
   display: block;
   color: var(--white);
-  font-size: clamp(5.25rem, 20vw, 8.5rem);
+  font-size: clamp(5.5rem, 21vw, 8.5rem);
   letter-spacing: 0.06em;
 }
 
@@ -113,13 +113,13 @@ overflow: hidden;
   position: relative;
   z-index: 2;
   margin-top: -0.18em;
-  margin-left: 0.05em;
+  margin-left: 0.23em;
   color: var(--pink);
   font-family: "Bigtimes", cursive;
   font-weight: 400;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
-  font-size: clamp(6rem, 23vw, 9.5rem);
+  font-size: clamp(6.5rem, 25vw, 10rem);
   line-height: 0.68;
   text-transform: none;
   letter-spacing: 0;
@@ -132,8 +132,8 @@ overflow: hidden;
 
 .logo-year {
   position: absolute;
-  right: 1.2em;
-  bottom: -0.84em;
+  right: .43em;
+  bottom: -0.76em;
   z-index: 1;
   color: var(--lavender);
   font-size: clamp(2.25rem, 7vw, 3.75rem);
