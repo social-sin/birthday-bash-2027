@@ -985,7 +985,7 @@ footer,
     font-size: 1.65rem;
   }
 
-  .nav {
+  .nav, .header-btn, .site-header {
     display: none;
   }
 
