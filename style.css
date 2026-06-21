@@ -35,10 +35,17 @@ body {
   animation: pageFadeIn 0.8s ease both;
 }
 
-.sparkle{
+.sparkle {
+  display: inline-block;
   color: var(--pink);
-  font-size:.6em;
+  font-size: 0.9em;
+  line-height: 1;
+  margin-left: 0.12em;
+  transform: translateY(-0.2em);
   vertical-align: top;
+  text-shadow:
+    0 0 8px rgba(242, 82, 155, 0.65),
+    0 0 18px rgba(242, 82, 155, 0.35);
 }
 
 .age-mark {
