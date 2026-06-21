@@ -162,6 +162,11 @@ box-shadow:
 0 0 28px rgba(242, 82, 155, 0.28);
 }
 
+.checkmark svg path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 h1,
 h3,
 .email-btn {
