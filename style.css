@@ -272,6 +272,38 @@ p {
   margin-top: 0.75rem;
 }
 
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.countdown div {
+  min-width: 90px;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(242, 82, 155, 0.45);
+  background: rgba(8, 8, 18, 0.65);
+  box-shadow: 0 0 18px rgba(242, 82, 155, 0.22);
+}
+
+.countdown span {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--pink);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.countdown small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.65rem;
+}
+
 /* Shared Sections */
 
 .section-light {
