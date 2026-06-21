@@ -518,15 +518,17 @@ select {
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(242, 82, 155, 0.35);
-  color: var(--white);
+  color: rgba(255,255,255,.7); /* makes "Select" look like placeholder text */
   padding: 1rem;
   border-radius: 0.35rem;
-}
 
-select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+select:valid {
+  color: var(--white);
 }
 
 option {
