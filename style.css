@@ -38,10 +38,10 @@ body {
 .sparkle {
   display: inline-block;
   color: var(--pink);
-  font-size: 0.9em;
+  font-size: 0.75em;
   line-height: 1;
-  margin-left: 0.12em;
-  transform: translateY(-0.2em);
+  margin-left: 0.15em;
+  transform: translateY(-0.18em);
   vertical-align: top;
   text-shadow:
     0 0 8px rgba(242, 82, 155, 0.65),
