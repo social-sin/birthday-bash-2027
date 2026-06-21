@@ -400,7 +400,7 @@ p {
   text-align: center;
   align-self: center;
   filter: drop-shadow(0 0 16px rgba(242, 82, 155, 0.35));
-  transform: translateY(-20px)
+  transform: translateY(-20px);
 }
 
 .schedule h2 {
@@ -456,16 +456,21 @@ p {
 }
 
 .rsvp-image {
-  .rsvp-image {
   position: relative;
   overflow: hidden;
-
+  display: grid;
+  place-items: center;
+  min-height: 480px;
   background:
     linear-gradient(
-      rgba(8,8,18,.75),
-      rgba(37,17,47,.65)
+      rgba(20, 5, 35, 0.45),
+      rgba(20, 5, 35, 0.65)
     ),
-    url("./assets/pexels-bertellifotografia-16935907.jpg");
+    linear-gradient(
+      rgba(165, 107, 255, 0.25),
+      rgba(242, 82, 155, 0.18)
+    ),
+    url("./assets/pexels-bertellifotografia-16935993.jpg");
 
   background-size: cover;
   background-position: center;
@@ -478,9 +483,9 @@ p {
   line-height: 0.9;
   transform: rotate(-5deg);
   text-shadow:
-    0 0 12px rgba(242,82,155,.9),
-    0 0 30px rgba(242,82,155,.75),
-    0 0 60px rgba(242,82,155,.45);
+    0 0 12px rgba(242, 82, 155, 0.9),
+    0 0 30px rgba(242, 82, 155, 0.75),
+    0 0 60px rgba(242, 82, 155, 0.45);
   max-width: 80%;
   text-align: center;
 }
@@ -493,6 +498,10 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.2rem;
+}
+
+.form-grid .full-width {
+  grid-column: 1 / -1;
 }
 
 label {
