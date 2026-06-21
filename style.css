@@ -572,12 +572,17 @@ footer {
   border-top: 1px solid rgba(242, 82, 155, 0.35);
 }
 
+.footer-signoff {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* remove if left-aligned */
+  gap: 0.25rem;
+}
+
 .script-text {
   font-family: "Bigtimes", cursive;
   color: var(--pink);
   font-size: 2rem;
-  letter-spacing: 0;
-  display: inline-block;
   transform: rotate(-4deg);
 }
 
