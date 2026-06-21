@@ -398,19 +398,13 @@ p {
 }
 
 .icon {
-  font-size: 2.8rem;
-  color: var(--pink);
-  margin-bottom: 1rem;
-}
-
-.icon svg {
   width: 48px;
   height: 48px;
-  fill: var(--pink);
-
+  object-fit: contain;
+  margin-bottom: 1rem;
   filter:
-    drop-shadow(0 0 6px rgba(242,82,155,.5))
-    drop-shadow(0 0 12px rgba(242,82,155,.25));
+    drop-shadow(0 0 6px rgba(242, 82, 155, 0.55))
+    drop-shadow(0 0 14px rgba(242, 82, 155, 0.28));
 }
 
 .experience h3,
