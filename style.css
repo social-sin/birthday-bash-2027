@@ -299,13 +299,6 @@ p {
     0 0 48px rgba(242, 82, 155, 0.35);
 }
 
-.rsvp-image p {
-  font-family: "Pacifico", cursive;
-  color: var(--pink);
-  font-size: clamp(3rem, 6vw, 6rem);
-  text-shadow: 0 0 18px rgba(242, 82, 155, 0.9);
-}
-
 .rsvp-form {
   padding: 5rem 8%;
 }
