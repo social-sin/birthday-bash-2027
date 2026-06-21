@@ -109,11 +109,6 @@ h1 {
   text-transform: uppercase;
 }
 
-.sparkle {
-  color: var(--pink);
-  margin-left: .2rem;
-}
-
 .intro {
   font-size: 1.15rem;
   line-height: 1.7;
@@ -144,15 +139,27 @@ h1 {
   letter-spacing: .08em;
 }
 
-.primary-btn {
-  background:
-    linear-gradient(
-      135deg,
-      var(--pink),
-      var(--hot-pink)
-    );
+.email-preview-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: rgba(255,255,255,.8);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
-  color: var(--black);
+.email-preview-link:link,
+.email-preview-link:visited {
+  color: rgba(255,255,255,.8);
+}
+
+.email-preview-link:hover,
+.email-preview-link:focus {
+  color: var(--pink);
+}
+
+.email-preview-link:active {
+  color: var(--lavender);
 }
 
 .secondary-btn {
