@@ -3,8 +3,9 @@
 @font-face {
   font-family: "Bigtimes";
   src: url("./assets/Bigtimes.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -43,6 +44,14 @@ h3,
 button {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.08em;
+}
+
+.logo span,
+.footer-logo span,
+.hero h1 span,
+.rsvp-image p {
+  font-weight: 400;
+  font-synthesis: none;
 }
 
 h2 {
@@ -150,31 +159,51 @@ p {
 }
 
 .hero h1 {
-  margin: 0;
-  font-size: clamp(4rem, 13vw, 11rem);
-  line-height: 0.8;
+  position: relative;
+  margin: 0 auto;
+  font-size: clamp(6rem, 16vw, 14rem);
+  line-height: 0.75;
+  font-weight: 400;
+  text-align: left;
+  width: fit-content;
+  padding-bottom: 0.35em;
 }
 
 .hero h1 span {
   display: block;
+  position: relative;
+  z-index: 2;
   font-family: "Bigtimes", cursive;
+  font-weight: 400;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
   color: var(--pink);
-  font-size: 0.85em;
-  text-transform: none;
+  font-size: 1.38em;
+  line-height: 0.68;
   letter-spacing: 0;
-  line-height: 0.65;
-  margin-top: -0.08em;
-  margin-bottom: -0.03em;
-  transform: rotate(-4deg);
+  margin-top: -0.18em;
+  margin-left: 0.05em;
+  transform: rotate(-5deg);
   text-shadow:
-    0 0 8px rgba(242, 82, 155, 0.75),
-    0 0 24px rgba(242, 82, 155, 0.55),
-    0 0 48px rgba(242, 82, 155, 0.35);
+    0 0 8px rgba(242, 82, 155, 0.7),
+    0 0 24px rgba(242, 82, 155, 0.45),
+    0 0 42px rgba(242, 82, 155, 0.25);
 }
 
 .hero h1 em {
+  position: absolute;
+  right: 0.25em;
+  bottom: -0.08em;
+  z-index: 1;
   color: var(--lavender);
   font-style: normal;
+  font-size: 0.46em;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.tagline {
+  margin-top: 0.75rem;
 }
 
 .section-light {
@@ -406,4 +435,3 @@ footer {
     text-align: center;
   }
 }
-
