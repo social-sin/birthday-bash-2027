@@ -380,15 +380,6 @@ p {
   max-width: 560px;
 }
 
-.schedule-art {
-  width: clamp(180px, 16vw, 260px);
-  height: clamp(180px, 16vw, 260px);
-  background: url("./assets/cocktail.png") no-repeat center;
-  background-size: contain;
-  transform: translateY(-10px);
-  opacity: 0.95;
-}
-
 .event-info {
   grid-column: 3;
   position: relative;
@@ -504,17 +495,50 @@ p {
 .schedule {
   position: relative;
   overflow: hidden;
-  min-height: 360px;
-  padding: 3.5rem 8% 2rem;
+  min-height: 430px;
+  padding: 4rem 7% 2rem;
+
   display: grid;
-  grid-template-columns: 220px 650px 1fr;
-  align-items: center;
+  grid-template-columns: 280px 500px 1fr;
   gap: 2.5rem;
+  align-items: center;
+
   background:
     linear-gradient(rgba(255,255,255,.18), rgba(255,255,255,.18)),
     url("./assets/Vegas Vector.png") no-repeat bottom right,
     var(--cream);
-  background-size: 58% auto;
+  background-position: bottom right -60px;
+  background-size: 52% auto;
+}
+
+.schedule h2 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.5rem, 3.25vw, 3.5rem);
+  white-space: nowrap;
+}
+
+.schedule-art {
+  position: absolute;
+  left: -35px;
+  bottom: -50px;
+  width: 420px;
+  height: 420px;
+
+  background: url("./assets/cocktail.png") no-repeat bottom left;
+  background-size: contain;
+
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.95;
+}
+
+
+.schedule > div:not(.schedule-art) {
+  grid-column: 2;
+  position: relative;
+  z-index: 1;
+
+  margin-left: -50px;
 }
 
 .schedule h2 {
@@ -799,4 +823,5 @@ footer {
     text-align: center;
   }
 }
+
 
