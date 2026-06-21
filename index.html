@@ -286,26 +286,41 @@
   </footer>
 
 <script>
-  function animateNumber(selector, max, min, speed) {
-    const el = document.querySelector(selector);
-    if (!el) return;
+  const countdown = {
+    days: 235,
+    hours: 14,
+    minutes: 22
+  };
 
-    let value = Number(el.textContent) || max;
+  const daysEl = document.querySelector(".days");
+  const hoursEl = document.querySelector(".hours");
+  const minutesEl = document.querySelector(".minutes");
 
-    setInterval(() => {
-      value--;
+  function updateCountdown() {
+    countdown.minutes--;
 
-      if (value < min) {
-        value = max;
-      }
+    if (countdown.minutes < 0) {
+      countdown.minutes = 59;
+      countdown.hours--;
+    }
 
-      el.textContent = value.toString().padStart(2, "0");
-    }, speed);
+    if (countdown.hours < 0) {
+      countdown.hours = 23;
+      countdown.days--;
+    }
+
+    if (countdown.days < 229) {
+      countdown.days = 235;
+      countdown.hours = 14;
+      countdown.minutes = 22;
+    }
+
+    daysEl.textContent = countdown.days;
+    hoursEl.textContent = String(countdown.hours).padStart(2, "0");
+    minutesEl.textContent = String(countdown.minutes).padStart(2, "0");
   }
 
-  animateNumber(".days", 235, 229, 3500);
-  animateNumber(".hours", 23, 0, 1200);
-  animateNumber(".minutes", 59, 0, 700);
+  setInterval(updateCountdown, 5000);
 </script>
 
 </body>
