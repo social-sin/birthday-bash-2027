@@ -352,11 +352,25 @@ p {
   padding: 5rem 8%;
 }
 
-.illustration {
-  font-size: clamp(6rem, 12vw, 12rem);
-  color: var(--pink);
-  text-align: center;
-  filter: drop-shadow(0 0 18px rgba(242, 82, 155, 0.45));
+.about-illustration,
+.schedule-illustration {
+  width: clamp(120px, 12vw, 190px);
+  aspect-ratio: 1 / 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter:
+    drop-shadow(0 0 8px rgba(242, 82, 155, 0.35))
+    drop-shadow(0 0 18px rgba(242, 82, 155, 0.18));
+}
+
+.about-illustration {
+  background-image: url("./assets/palm-tree.png");
+}
+
+.schedule-illustration {
+  background-image: url("./assets/cocktail.png");
+  transform: translateY(-20px);
 }
 
 .event-info {
@@ -453,14 +467,6 @@ p {
     var(--cream);
   background-size: 58% auto;
   
-}
-
-.schedule .cocktail {
-  font-size: clamp(5rem, 8vw, 8rem);
-  text-align: center;
-  align-self: center;
-  filter: drop-shadow(0 0 16px rgba(242, 82, 155, 0.35));
-  transform: translateY(-20px);
 }
 
 .schedule h2 {
