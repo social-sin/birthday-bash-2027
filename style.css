@@ -347,42 +347,42 @@ p {
 .about {
   position: relative;
   overflow: hidden;
-  min-height: 520px;
-
+  min-height: 430px;
   display: grid;
-  grid-template-columns: minmax(500px, 3fr) minmax(260px, 1fr);
-
+  grid-template-columns: 320px minmax(420px, 560px) minmax(280px, 360px);
   gap: 4rem;
   align-items: center;
-
-  padding: 5rem 8%;
-}
-
-.about-content,
-.event-info {
-  position: relative;
-  z-index: 1;
+  padding: 4rem 8%;
 }
 
 .about-art {
   position: absolute;
-  left: -170px;
-  bottom: -70px;
-  width: 620px;
-  height: 620px;
-  background: url("./assets/palm-tree.png") no-repeat center;
+  left: -70px;
+  bottom: -35px;
+  width: 420px;
+  height: 420px;
+  background: url("./assets/palm-tree.png") no-repeat bottom left;
   background-size: contain;
   pointer-events: none;
   z-index: 0;
-  left: -220px;
-  bottom: -80px;
-  width: 680px;
-  height: 680px;
 }
 
-.about > div:not(.about-art) {
+.about-content {
+  grid-column: 2;
   position: relative;
   z-index: 1;
+}
+
+.about-content p {
+  max-width: 560px;
+}
+
+.event-info {
+  grid-column: 3;
+  position: relative;
+  z-index: 1;
+  border-left: 1px solid rgba(242, 82, 155, 0.35);
+  padding-left: 2rem;
 }
 
 .schedule-art {
