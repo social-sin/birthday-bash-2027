@@ -295,7 +295,6 @@ p {
 
 .timeline span {
   color: var(--pink);
-  font-weight: 800;
 }
 
 .why-grid {
@@ -375,6 +374,26 @@ footer {
   gap: 2rem;
   background: var(--black);
   border-top: 1px solid rgba(242, 82, 155, 0.35);
+}
+
+.script-text {
+  font-family: "Bigtimes", cursive;
+  font-weight: 400;
+  font-synthesis: none;
+  color: var(--pink);
+  font-size: 2rem;
+  letter-spacing: 0;
+  display: inline-block;
+  transform: rotate(-4deg);
+}
+
+.timeline-time {
+  font-family: "Bigtimes", cursive;
+  font-weight: 400;
+  font-synthesis: none;
+  color: var(--pink);
+  font-size: 1.6rem;
+  letter-spacing: 0;
 }
 
 @media (max-width: 1000px) {
