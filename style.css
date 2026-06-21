@@ -240,13 +240,30 @@ p {
   color: var(--white);
 }
 
-.about,
-.schedule {
+.about {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   gap: 3rem;
   align-items: center;
   padding: 5rem 8%;
+}
+
+.schedule {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    url("./assets/Vegas Vector.png") no-repeat bottom right,
+    var(--cream);
+
+  background-size: auto 55%;
+    display: grid;
+  grid-template-columns: 180px 420px;
+  align-items: center;
+  gap: 3rem;
+
+  min-height: 400px;
+  padding: 4rem 8%;
 }
 
 .illustration,
