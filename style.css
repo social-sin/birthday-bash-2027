@@ -536,6 +536,12 @@ option {
   color: var(--white);
 }
 
+.label-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
 .required {
   color: var(--pink);
 }
