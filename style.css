@@ -345,6 +345,8 @@ p {
 /* About */
 
 .about {
+  position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   gap: 3rem;
@@ -352,34 +354,22 @@ p {
   padding: 5rem 8%;
 }
 
-.about-illustration {
-  width: clamp(220px, 18vw, 300px);
-  aspect-ratio: 1 / 1;
-
-  background:
-    linear-gradient(
-      rgba(255,255,255,.18),
-      rgba(255,255,255,.18)
-    ),
-    url("./assets/palm-tree.png"); no-repeat bottom contain,
-    var(--cream);
+.about-art {
+  width: clamp(260px, 24vw, 420px);
+  height: clamp(260px, 24vw, 420px);
+  background: url("./assets/palm-tree.png") no-repeat center;
+  background-size: contain;
+  transform: translateX(-10px);
+  opacity: 0.95;
 }
 
-.schedule-illustration {
-  width: clamp(180px, 14vw, 240px);
-  aspect-ratio: 1 / 1;
-
-  background:
-    linear-gradient(
-      rgba(255,255,255,.18),
-      rgba(255,255,255,.18)
-    ),
-    url("./assets/cocktail.png"); no-repeat bottom contain,
-    var(--cream);
-
+.schedule-art {
+  width: clamp(180px, 16vw, 260px);
+  height: clamp(180px, 16vw, 260px);
+  background: url("./assets/cocktail.png") no-repeat center;
+  background-size: contain;
   transform: translateY(-10px);
-
-  filter: drop-shadow(0 0 10px rgba(242,82,155,.12));
+  opacity: 0.95;
 }
 
 .event-info {
@@ -464,18 +454,14 @@ p {
   min-height: 360px;
   padding: 3.5rem 8% 2rem;
   display: grid;
-  grid-template-columns: 180px 650px 1fr;
+  grid-template-columns: 220px 650px 1fr;
   align-items: center;
   gap: 2.5rem;
   background:
-    linear-gradient(
-      rgba(255,255,255,.18),
-      rgba(255,255,255,.18)
-    ),
+    linear-gradient(rgba(255,255,255,.18), rgba(255,255,255,.18)),
     url("./assets/Vegas Vector.png") no-repeat bottom right,
     var(--cream);
   background-size: 58% auto;
-  
 }
 
 .schedule h2 {
