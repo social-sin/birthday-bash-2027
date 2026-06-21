@@ -435,31 +435,224 @@ border: 1px solid rgba(242, 82, 155, 0.65);
   opacity: .95;
 }
 
-.social-links img:hover {
-  opacity: 1;
+
+/* Responsive Refinements */
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Responsive */
+body {
+  min-width: 320px;
+}
 
-@media (max-width: 520px) {
+.preheader,
+main,
+.email-footer {
+  width: min(100%, 640px);
+}
+
+/* Tablet / narrow email preview */
+@media (max-width: 640px) {
+  .preheader {
+    font-size: 0.85rem;
+    gap: 0.9rem;
+    padding: 0.8rem 0.75rem;
+  }
+
+  .email-hero {
+    min-height: clamp(260px, 68vw, 360px);
+    padding: 2rem 1rem 3rem;
+  }
+
+  .logo-top {
+    font-size: clamp(4rem, 16vw, 6rem);
+  }
+
+  .logo-script {
+    font-size: clamp(4.75rem, 19vw, 7rem);
+    margin-left: 0.2em;
+  }
+
+  .logo-year {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    right: 0.45em;
+    bottom: -0.72em;
+  }
+
+  .confirmation {
+    padding: 2.5rem 1.5rem 1.25rem;
+  }
+
+  .confirmation h1 {
+    font-size: clamp(2.75rem, 12vw, 4rem);
+  }
+
+  .confirmation h2 {
+    font-size: 1.25rem;
+  }
+
+  .confirmation p {
+    font-size: 1rem;
+  }
+
+  .event-details,
+  .calendar-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .calendar-buttons {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .email-footer {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .preheader {
+    font-size: 0.78rem;
+    gap: 0.65rem;
+  }
+
+  .email-hero {
+    min-height: 245px;
+  }
+
+  .logo-top {
+    font-size: clamp(3.3rem, 16vw, 4.25rem);
+  }
+
+  .logo-script {
+    font-size: clamp(4rem, 20vw, 5.25rem);
+    margin-top: -0.16em;
+    margin-left: 0.18em;
+  }
+
+  .logo-year {
+    font-size: clamp(1.5rem, 7vw, 2.25rem);
+    right: 0.45em;
+    bottom: -0.7em;
+  }
+
+  .checkmark {
+    width: 70px;
+    height: 70px;
+  }
+
+  .checkmark svg {
+    width: 46px;
+    height: 46px;
+  }
+
+  .detail-item {
+    grid-template-columns: 34px 1fr;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .detail-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .detail-item h3 {
+    font-size: 1.15rem;
+  }
+
+  .email-btn {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
+
+  .script-text {
+    font-size: clamp(3rem, 18vw, 4rem);
+  }
+}
+
+/* Extra tiny phones */
+@media (max-width: 320px) {
+  .preheader {
+    flex-wrap: wrap;
+    row-gap: 0.35rem;
+  }
+
+  .logo-top {
+    font-size: 3rem;
+  }
+
+  .logo-script {
+    font-size: 3.65rem;
+  }
+
+  .confirmation h1 {
+    font-size: 2.5rem;
+  }
+
+  .event-details,
+  .calendar-section,
+  .confirmation {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.preheader,
+main,
+.email-footer {
+  width: 100%;
+  max-width: 640px;
+}
+
+.email-logo,
+.logo-top,
+.logo-script,
+.logo-year,
+.script-text,
+.footer-signoff,
+.update-rsvp,
+.confirmation-id {
+  max-width: 100%;
+}
+
+.calendar-section {
+  text-align: center;
+}
+
 .calendar-buttons {
-grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
-.event-details,
-.calendar-section,
-.confirmation {
-padding-left: 1.5rem;
-padding-right: 1.5rem;
+.email-btn {
+  width: 100%;
 }
 
-.detail-item {
-grid-template-columns: 38px 1fr;
+.venue-image-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 2.75rem auto 0;
 }
 
-.detail-icon {
-width: 34px;
-height: 34px;
+.venue-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-}
-
