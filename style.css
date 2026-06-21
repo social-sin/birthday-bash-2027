@@ -456,9 +456,16 @@ p {
 }
 
 .rsvp-image {
-  display: grid;
-  place-items: center;
-  min-height: 480px;
+  .rsvp-image {
+  background:
+    linear-gradient(
+      rgba(8,8,18,.70),
+      rgba(8,8,18,.70)
+    ),
+    url("./assets/PLV_Fireside_001lo__1_.webp");
+
+  background-size: cover;
+  background-position: center;
 }
 
 .rsvp-image p {
@@ -471,6 +478,8 @@ p {
     0 0 8px rgba(242, 82, 155, 0.85),
     0 0 24px rgba(242, 82, 155, 0.6),
     0 0 48px rgba(242, 82, 155, 0.35);
+  max-width: 80%;
+  text-align: center;
 }
 
 .rsvp-form {
