@@ -25,6 +25,33 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
+<script>
+  const countdownValues = {
+    days: 235,
+    hours: 14,
+    minutes: 22
+  };
+
+  function animateNumber(selector, max, min, speed) {
+    const el = document.querySelector(selector);
+    let value = max;
+
+    setInterval(() => {
+      value--;
+
+      if (value < min) {
+        value = max;
+      }
+
+      el.textContent = value.toString().padStart(2, "0");
+    }, speed);
+  }
+
+  animateNumber(".days", 235, 229, 3500);
+  animateNumber(".hours", 23, 0, 1200);
+  animateNumber(".minutes", 59, 0, 700);
+</script>
+
 <body>
   <header class="site-header">
     <a href="#hero" class="logo">Birthday <span>Bash</span> <em>2027</em></a>
@@ -51,9 +78,9 @@
         <p class="details">02.21.27 • Downtown Las Vegas</p>
 
         <div class="countdown">
-          <div><span>235</span><small>Days</small></div>
-          <div><span>14</span><small>Hours</small></div>
-          <div><span>22</span><small>Minutes</small></div>
+          <div><span class="count-number days">235</span><small>Days</small></div>
+          <div><span class="count-number hours">14</span><small>Hours</small></div>
+          <div><span class="count-number minutes">22</span><small>Minutes</small></div>
         </div>
         
         <a href="#rsvp" class="primary-btn">Reserve Your Spot</a>
