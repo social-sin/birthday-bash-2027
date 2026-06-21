@@ -148,21 +148,27 @@ text-align: center;
 }
 
 .checkmark {
-width: 82px;
-height: 82px;
-margin: 0 auto 1.5rem;
-display: grid;
-place-items: center;
-border: 3px solid var(--pink);
-border-radius: 50%;
-color: var(--pink);
-font-size: 3rem;
-box-shadow:
-0 0 10px rgba(242, 82, 155, 0.55),
-0 0 28px rgba(242, 82, 155, 0.28);
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 1.5rem;
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--pink);
+  border-radius: 999px;
+  box-shadow:
+    0 0 10px rgba(242, 82, 155, 0.55),
+    0 0 28px rgba(242, 82, 155, 0.28);
 }
 
-.checkmark svg path {
+.checkmark svg {
+  width: 44px;
+  height: 44px;
+}
+
+.checkmark path {
+  fill: none;
+  stroke: var(--pink);
+  stroke-width: 6;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
