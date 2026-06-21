@@ -448,7 +448,11 @@ p {
 .rsvp {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
-  background: linear-gradient(135deg, var(--purple), var(--black));
+  background:
+    radial-gradient(circle at left, rgba(242, 82, 155, 0.18), transparent 35%),
+    var(--black);
+  border-top: 1px solid rgba(242, 82, 155, 0.25);
+  border-bottom: 1px solid rgba(242, 82, 155, 0.25);
 }
 
 .rsvp-image {
@@ -512,6 +516,15 @@ option {
 .rsvp-form button {
   width: 100%;
   margin: 1.5rem 0 0.7rem;
+}
+
+.faq h3 {
+  color: var(--black);
+}
+
+.faq article {
+  background: rgba(242, 82, 155, 0.06);
+  border: 1px solid rgba(242, 82, 155, 0.28);
 }
 
 /* Footer */
