@@ -21,9 +21,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-
-  display: grid;
-  place-items: center;
+  overflow-x: hidden;
 
   font-family: "Inter", sans-serif;
   color: var(--white);
@@ -39,11 +37,17 @@ body {
   background-position: center;
 }
 
+.confirmation-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
 .confirmation-card {
-  width: min(90%, 650px);
-
+  width: min(92vw, 650px);
+  margin: 0 auto;
   padding: 4rem 3rem;
-
   text-align: center;
 
   background:
@@ -55,10 +59,7 @@ body {
     rgba(8,8,18,.88);
 
   border: 1px solid rgba(242,82,155,.35);
-
-  box-shadow:
-    0 0 40px rgba(242,82,155,.15);
-
+  box-shadow: 0 0 40px rgba(242,82,155,.15);
   backdrop-filter: blur(8px);
 }
 
@@ -143,7 +144,7 @@ h1 {
   display: inline-block;
   margin-top: 1.25rem;
   color: rgba(255,255,255,.8);
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -179,3 +180,4 @@ h1 {
   }
 
 }
+
