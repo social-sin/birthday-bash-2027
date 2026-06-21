@@ -713,17 +713,26 @@ footer {
 .footer-signoff {
   display: flex;
   flex-direction: column;
-  align-items: center; /* remove if left-aligned */
-  gap: 0.25rem;
+  align-items: center;
+  gap: 0.35rem;
+
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
 .script-text {
   font-family: "Bigtimes", cursive;
   color: var(--pink);
-  font-size: 2rem;
+  font-size: 3rem;
+  line-height: 0.95;
   transform: rotate(-4deg);
 }
 
+footer > p:last-child {
+  font-weight: 800; /* bold hashtag */
+  font-size: 1.1rem;
+}
 /* Animations */
 
 @keyframes pageFadeIn {
