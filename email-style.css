@@ -61,75 +61,83 @@ overflow: hidden;
 /* Preheader */
 
 .preheader {
-width: min(100%, 640px);
-margin: 0 auto;
-display: flex;
-justify-content: center;
-gap: 1rem;
-padding: 0.75rem 1rem;
-background: #03030a;
-color: var(--white);
-font-size: 0.8rem;
+  width: min(100%, 640px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1.35rem;
+  padding: 0.95rem 1rem;
+  background: #03030a;
+  color: var(--white);
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .preheader a {
-color: var(--white);
+  color: var(--white);
+  text-underline-offset: 3px;
 }
 
 /* Hero */
 
 .email-hero {
-min-height: 330px;
-display: grid;
-place-items: center;
-text-align: center;
-background:
-linear-gradient(rgba(8, 8, 18, 0.12), rgba(8, 8, 18, 0.72)),
-url("./assets/Purple Vegas.png") center / cover no-repeat;
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  background:
+    linear-gradient(rgba(8, 8, 18, 0.08), rgba(8, 8, 18, 0.68)),
+    url("./assets/Purple Vegas.png") center / cover no-repeat;
 }
 
 .email-logo {
-position: relative;
-width: fit-content;
-font-family: "Bebas Neue", sans-serif;
-text-transform: uppercase;
-line-height: 0.78;
-text-align: left;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  line-height: 0.75;
+  text-align: left;
 }
 
 .logo-top {
-display: block;
-color: var(--white);
-font-size: clamp(5rem, 18vw, 8rem);
-letter-spacing: 0.05em;
+  display: block;
+  color: var(--white);
+  font-size: clamp(5.25rem, 20vw, 8.5rem);
+  letter-spacing: 0.06em;
 }
 
 .logo-script {
-display: block;
-position: relative;
-z-index: 2;
-margin-top: -0.18em;
-margin-left: 0.05em;
-color: var(--pink);
-font-family: "Bigtimes", cursive;
-font-size: clamp(6rem, 20vw, 9rem);
-text-transform: none;
-letter-spacing: 0;
-transform: rotate(-5deg);
-text-shadow:
-0 0 8px rgba(242, 82, 155, 0.8),
-0 0 24px rgba(242, 82, 155, 0.55),
-0 0 48px rgba(242, 82, 155, 0.35);
+  display: block;
+  position: relative;
+  z-index: 2;
+  margin-top: -0.18em;
+  margin-left: 0.05em;
+  color: var(--pink);
+  font-family: "Bigtimes", cursive;
+  font-weight: 400;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  font-size: clamp(6rem, 23vw, 9.5rem);
+  line-height: 0.68;
+  text-transform: none;
+  letter-spacing: 0;
+  transform: rotate(-5deg);
+  text-shadow:
+    0 0 8px rgba(242, 82, 155, 0.7),
+    0 0 24px rgba(242, 82, 155, 0.45),
+    0 0 42px rgba(242, 82, 155, 0.25);
 }
 
 .logo-year {
-position: absolute;
-right: -0.1em;
-bottom: -0.12em;
-z-index: 1;
-color: var(--lavender);
-font-size: clamp(3.5rem, 12vw, 5rem);
-letter-spacing: 0.04em;
+  position: absolute;
+  right: 1.2em;
+  bottom: -0.84em;
+  z-index: 1;
+  color: var(--lavender);
+  font-size: clamp(2.25rem, 7vw, 3.75rem);
+  letter-spacing: 0.04em;
 }
 
 /* Confirmation */
@@ -265,44 +273,47 @@ border: 1px solid rgba(242, 82, 155, 0.65);
 /* Footer */
 
 .email-footer {
-width: min(100%, 640px);
-margin: 0 auto;
-padding: 2.75rem 2rem;
-text-align: center;
-background:
-linear-gradient(rgba(8, 8, 18, 0.72), rgba(8, 8, 18, 0.92)),
-url("./assets/Purple Vegas.png") center / cover no-repeat;
-border: 1px solid rgba(242, 82, 155, 0.28);
-border-top: 1px solid rgba(242, 82, 155, 0.35);
+  width: min(100%, 640px);
+  margin: 0 auto;
+  padding: 3.75rem 2rem;
+  text-align: center;
+  background:
+    linear-gradient(rgba(8, 8, 18, 0.72), rgba(8, 8, 18, 0.92)),
+    url("./assets/Purple Vegas.png") center / cover no-repeat;
+  border: 1px solid rgba(242, 82, 155, 0.28);
+  border-top: 1px solid rgba(242, 82, 155, 0.35);
 }
 
 .footer-signoff {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 0.35rem;
-margin: 0 0 1.5rem;
-}
-
-.footer-signoff {
-font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.15rem;
+  margin: 0 0 2rem;
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.35rem;
 }
 
 .script-text {
-font-family: "Bigtimes", cursive;
-color: var(--pink);
-font-size: clamp(3rem, 11vw, 4.75rem);
-line-height: 0.9;
-transform: rotate(-4deg);
-text-shadow:
-0 0 10px rgba(242, 82, 155, 0.8),
-0 0 28px rgba(242, 82, 155, 0.5);
+  font-family: "Bigtimes", cursive;
+  color: var(--pink);
+  font-size: clamp(3rem, 11vw, 4.75rem);
+  line-height: 0.9;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  transform: rotate(-4deg);
+  text-shadow:
+    0 0 10px rgba(242, 82, 155, 0.8),
+    0 0 28px rgba(242, 82, 155, 0.5);
 }
 
-.email-footer > p {
-margin: 0;
-color: var(--pink);
-font-weight: 800;
+.email-footer > p:last-child {
+  margin: 0;
+  color: var(--white);
+  font-weight: 800;
 }
 
 /* Responsive */
