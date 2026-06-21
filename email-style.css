@@ -326,7 +326,7 @@ border: 1px solid rgba(242, 82, 155, 0.65);
 .update-rsvp {
   display: inline-block;
   margin-top: 1.5rem;
-  color: rgba(255,255,255,.75);
+  color: var(--pink);
   font-size: 0.95rem;
   text-decoration: underline;
   text-underline-offset: 3px;
