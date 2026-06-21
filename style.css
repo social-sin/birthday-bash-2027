@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&display=swap');
+
 @font-face {
   font-family: "Bigtimes";
   src: url("./assets/Bigtimes.otf") format("opentype");
@@ -72,6 +74,9 @@ p {
   text-decoration: none;
   font-size: 1.5rem;
   line-height: 0.9;
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
 }
 
 .logo span,
@@ -82,6 +87,7 @@ p {
   font-size: 2rem;
   text-transform: none;
   letter-spacing: 0;
+  margin: 0;
   transform: rotate(-4deg);
 }
 
@@ -406,3 +412,4 @@ footer {
     text-align: center;
   }
 }
+
