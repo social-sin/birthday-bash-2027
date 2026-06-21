@@ -347,20 +347,42 @@ p {
 .about {
   position: relative;
   overflow: hidden;
+  min-height: 520px;
+
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
-  gap: 3rem;
+  grid-template-columns: minmax(500px, 3fr) minmax(260px, 1fr);
+
+  gap: 4rem;
   align-items: center;
+
   padding: 5rem 8%;
 }
 
+.about-content,
+.event-info {
+  position: relative;
+  z-index: 1;
+}
+
 .about-art {
-  width: clamp(260px, 24vw, 420px);
-  height: clamp(260px, 24vw, 420px);
+  position: absolute;
+  left: -170px;
+  bottom: -70px;
+  width: 620px;
+  height: 620px;
   background: url("./assets/palm-tree.png") no-repeat center;
   background-size: contain;
-  transform: translateX(-10px);
-  opacity: 0.95;
+  pointer-events: none;
+  z-index: 0;
+  left: -220px;
+  bottom: -80px;
+  width: 680px;
+  height: 680px;
+}
+
+.about > div:not(.about-art) {
+  position: relative;
+  z-index: 1;
 }
 
 .schedule-art {
