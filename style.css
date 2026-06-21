@@ -179,7 +179,8 @@ p {
 
 .header-btn,
 .primary-btn,
-.rsvp-form button {
+.rsvp-form button,
+.form-button {
   display: inline-block;
   background: linear-gradient(135deg, var(--pink), var(--hot-pink));
   color: var(--black);
@@ -201,7 +202,8 @@ p {
 
 .header-btn:hover,
 .primary-btn:hover,
-.rsvp-form button:hover {
+.rsvp-form button:hover,
+.form-button:hover {
   transform: translateY(-3px);
   box-shadow:
     0 0 12px rgba(242, 82, 155, 0.55),
@@ -210,9 +212,21 @@ p {
 
 .header-btn:active,
 .primary-btn:active,
-.rsvp-form button:active {
+.rsvp-form button:active,
+.form-button:active {
   transform: translateY(0);
   box-shadow: 0 0 6px rgba(242, 82, 155, 0.45);
+}
+
+.form-button {
+  width: 100%;
+  margin: 1.5rem 0 0.7rem;
+  text-align: center;
+}
+
+.form-button:link,
+.form-button:visited {
+  color: var(--black);
 }
 
 /* Hero */
