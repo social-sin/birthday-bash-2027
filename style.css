@@ -202,7 +202,7 @@ p {
   padding: 8rem 5%;
   background:
     linear-gradient(rgba(8, 8, 18, 0.35), rgba(8, 8, 18, 0.95)),
-    url("https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=2000&q=80");
+    url("./assets/Purple Vegas.png");
   background-size: cover;
   background-position: center;
 }
