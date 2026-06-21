@@ -286,50 +286,32 @@
     <p>#BirthdayBash2027</p>
   </footer>
 
-<script>
-  const countdown = {
-    days: 235,
-    hours: 14,
-    minutes: 22
-  };
+    <script>
+      const countdown = { days: 235, hours: 14, minutes: 22 };
+      const daysEl = document.querySelector(".days");
+      const hoursEl = document.querySelector(".hours");
+      const minutesEl = document.querySelector(".minutes");
 
-  const daysEl = document.querySelector(".days");
-  const hoursEl = document.querySelector(".hours");
-  const minutesEl = document.querySelector(".minutes");
-
-  function updateCountdown() {
-    countdown.minutes--;
-
-    if (countdown.minutes < 0) {
-      countdown.minutes = 59;
-      countdown.hours--;
-    }
-
-    if (countdown.hours < 0) {
-      countdown.hours = 23;
-      countdown.days--;
-    }
-
-    if (countdown.days < 229) {
-      countdown.days = 235;
-      countdown.hours = 14;
-      countdown.minutes = 22;
-    }
-
-    daysEl.textContent = countdown.days;
-    hoursEl.textContent = String(countdown.hours).padStart(2, "0");
-    minutesEl.textContent = String(countdown.minutes).padStart(2, "0");
-  }
-
-  setInterval(updateCountdown, 5000);
-
-  if (!window.location.hostname.includes("github.io")) {
-  Sentry.init({
-    dsn: "",
-  });
-}
-
-</script>
-
-</body>
+      function updateCountdown() {
+        countdown.minutes--;
+        if (countdown.minutes < 0) {
+          countdown.minutes = 59;
+          countdown.hours--;
+        }
+        if (countdown.hours < 0) {
+          countdown.hours = 23;
+          countdown.days--;
+        }
+        if (countdown.days < 229) {
+          countdown.days = 235;
+          countdown.hours = 14;
+          countdown.minutes = 22;
+        }
+        daysEl.textContent = countdown.days;
+        hoursEl.textContent = String(countdown.hours).padStart(2, "0");
+        minutesEl.textContent = String(countdown.minutes).padStart(2, "0");
+      }
+      setInterval(updateCountdown, 5000);
+    </script>
+  </body>
 </html>
