@@ -171,6 +171,9 @@ text-align: center;
   stroke-width: 6;
   stroke-linecap: round;
   stroke-linejoin: round;
+  box-shadow:
+    0 0 10px rgba(242, 82, 155, 0.55),
+    0 0 28px rgba(242, 82, 155, 0.28);
 }
 
 h1,
