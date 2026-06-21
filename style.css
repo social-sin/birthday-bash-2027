@@ -352,25 +352,34 @@ p {
   padding: 5rem 8%;
 }
 
-.about-illustration,
-.schedule-illustration {
-  width: clamp(120px, 12vw, 190px);
-  aspect-ratio: 1 / 1;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  filter:
-    drop-shadow(0 0 8px rgba(242, 82, 155, 0.35))
-    drop-shadow(0 0 18px rgba(242, 82, 155, 0.18));
-}
-
 .about-illustration {
-  background-image: url("./assets/palm-tree.png");
+  width: clamp(220px, 18vw, 300px);
+  aspect-ratio: 1 / 1;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,.18),
+      rgba(255,255,255,.18)
+    ),
+    url("./assets/palm-tree.png"); no-repeat bottom contain,
+    var(--cream);
 }
 
 .schedule-illustration {
-  background-image: url("./assets/cocktail.png");
-  transform: translateY(-20px);
+  width: clamp(180px, 14vw, 240px);
+  aspect-ratio: 1 / 1;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,.18),
+      rgba(255,255,255,.18)
+    ),
+    url("./assets/cocktail.png"); no-repeat bottom contain,
+    var(--cream);
+
+  transform: translateY(-10px);
+
+  filter: drop-shadow(0 0 10px rgba(242,82,155,.12));
 }
 
 .event-info {
