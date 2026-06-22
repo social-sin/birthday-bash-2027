@@ -522,7 +522,7 @@ p {
     linear-gradient(rgba(255,255,255,.18), rgba(255,255,255,.18)),
     url("./assets/Vegas Vector.png") no-repeat bottom right,
     var(--cream);
-  background-position: bottom right -60px;
+  background-position: bottom right -10px;
   background-size: 52% auto;
 }
 
