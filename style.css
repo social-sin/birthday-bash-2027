@@ -8,6 +8,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "RocketClouds";
+  src: url("./assets/Rocket Clouds.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --black: #080812;
   --navy: #10101d;
@@ -630,7 +638,7 @@ p {
 }
 
 .rsvp-image p {
-  font-family: "Bigtimes", cursive;
+  font-family: "RocketClouds", cursive;
   color: var(--pink);
   font-size: clamp(3.5rem, 7vw, 7rem);
   line-height: 0.9;
