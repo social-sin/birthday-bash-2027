@@ -622,6 +622,7 @@ p {
   display: grid;
   place-items: center;
   min-height: 480px;
+  padding: 3rem;
   background:
     linear-gradient(
       rgba(20, 5, 35, 0.45),
@@ -640,15 +641,21 @@ p {
 .rsvp-image p {
   font-family: "RocketClouds", cursive;
   color: #ffcfe5;
-  font-size: clamp(3.5rem, 7vw, 7rem);
-  line-height: 0.9;
-  transform: rotate(-5deg);
+
+  font-size: clamp(3.25rem, 5.8vw, 6rem);
+  line-height: 1.4;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+
+  text-align: center;
+  transform: rotate(-5deg) scale(0.92);
+  transform-origin: center;
+
   text-shadow:
     0 0 12px rgba(242, 82, 155, 0.9),
     0 0 30px rgba(242, 82, 155, 0.75),
     0 0 60px rgba(242, 82, 155, 0.45);
-  max-width: 80%;
-  text-align: center;
 }
 
 .rsvp-form {
@@ -972,6 +979,11 @@ footer,
     min-height: 360px;
   }
 
+  .rsvp-image p {
+    font-size: clamp(4rem, 16vw, 7rem);
+    max-width: 90%;
+  }
+
   .faq-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1079,8 +1091,9 @@ footer,
     min-height: 300px;
   }
 
-  .rsvp-image p {
-    font-size: clamp(3rem, 18vw, 5rem);
+.rsvp-image p {
+    font-size: clamp(3.4rem, 18vw, 5.5rem);
+    max-width: 95%;
   }
 
   footer {
