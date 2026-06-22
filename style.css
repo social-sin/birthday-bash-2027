@@ -639,7 +639,7 @@ p {
 
 .rsvp-image p {
   font-family: "RocketClouds", cursive;
-  color: var(--pink);
+  color: #ffcfe5;
   font-size: clamp(3.5rem, 7vw, 7rem);
   line-height: 0.9;
   transform: rotate(-5deg);
