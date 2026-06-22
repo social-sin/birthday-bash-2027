@@ -8,7 +8,7 @@
 	.st0{
     fill:#f2529b;
     stroke:#f2529b;
-    stroke-width:10;
+    stroke-width:15;
     stroke-linecap:round;
     stroke-linejoin:round;
 }
