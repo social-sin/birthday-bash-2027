@@ -1088,12 +1088,17 @@ footer,
   }
 
   .rsvp-image {
+    overflow: visible;
+    padding: 2rem 1.75rem;
     min-height: 300px;
   }
 
 .rsvp-image p {
-    font-size: clamp(3.4rem, 18vw, 5.5rem);
-    max-width: 95%;
+    font-size: clamp(2.75rem, 15vw, 4.4rem);
+    line-height: 1.5;
+    max-width: 100%;
+    transform: rotate(-5deg) scale(0.82);
+    transform-origin: center;
   }
 
   footer {
@@ -1172,4 +1177,10 @@ footer,
   .script-text {
     font-size: 2.5rem;
   }
+
+  .rsvp-image p {
+    font-size: clamp(2.4rem, 14vw, 3.6rem);
+    transform: rotate(-5deg) scale(0.78);
+  }
+  
 }
