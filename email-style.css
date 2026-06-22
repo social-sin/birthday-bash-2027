@@ -19,20 +19,53 @@
   --white: #ffffff;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
-background:
-radial-gradient(circle at top, rgba(242, 82, 155, 0.12), transparent 35%),
-var(--black);
-color: var(--white);
-font-family: "Inter", sans-serif;
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(242, 82, 155, 0.12), transparent 35%),
+    var(--black);
 }
 
-.sparkle{
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Shared */
+
+.preheader,
+main,
+.email-footer {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.email-hero,
+.confirmation,
+.event-details,
+.calendar-section {
+  width: 100%;
+  max-width: 100%;
+}
+
+.sparkle {
   display: inline-block;
   color: var(--pink);
   font-size: 0.58em;
@@ -45,24 +78,27 @@ font-family: "Inter", sans-serif;
     0 0 18px rgba(242, 82, 155, 0.35);
 }
 
+h1,
+h3,
+.email-btn {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.08em;
+}
+
 /* Email Container */
 
 main {
-width: min(100%, 640px);
-margin: 0 auto;
-background:
-radial-gradient(circle at top right, rgba(242, 82, 155, 0.14), transparent 28%),
-linear-gradient(180deg, #080812, #10101d);
-border-left: 1px solid rgba(242, 82, 155, 0.28);
-border-right: 1px solid rgba(242, 82, 155, 0.28);
-overflow: hidden;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(242, 82, 155, 0.14), transparent 28%),
+    linear-gradient(180deg, #080812, #10101d);
+  border-left: 1px solid rgba(242, 82, 155, 0.28);
+  border-right: 1px solid rgba(242, 82, 155, 0.28);
 }
 
 /* Preheader */
 
 .preheader {
-  width: min(100%, 640px);
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 1.35rem;
@@ -86,6 +122,7 @@ overflow: hidden;
   place-items: center;
   text-align: center;
   padding: 3rem 1.5rem 4rem;
+  overflow: hidden;
   background:
     linear-gradient(rgba(8, 8, 18, 0.08), rgba(8, 8, 18, 0.68)),
     url("./assets/Purple Vegas.png") center / cover no-repeat;
@@ -94,11 +131,12 @@ overflow: hidden;
 .email-logo {
   position: relative;
   width: fit-content;
+  max-width: 100%;
   margin: 0 auto;
   font-family: "Bebas Neue", sans-serif;
-  text-transform: uppercase;
   line-height: 0.75;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .logo-top {
@@ -116,13 +154,13 @@ overflow: hidden;
   margin-left: 0.23em;
   color: var(--pink);
   font-family: "Bigtimes", cursive;
+  font-size: clamp(6.5rem, 25vw, 10rem);
   font-weight: 400;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
-  font-size: clamp(6.5rem, 25vw, 10rem);
   line-height: 0.68;
-  text-transform: none;
   letter-spacing: 0;
+  text-transform: none;
   transform: rotate(-5deg);
   text-shadow:
     0 0 8px rgba(242, 82, 155, 0.7),
@@ -132,7 +170,7 @@ overflow: hidden;
 
 .logo-year {
   position: absolute;
-  right: .43em;
+  right: 0.43em;
   bottom: -0.76em;
   z-index: 1;
   color: var(--lavender);
@@ -143,8 +181,8 @@ overflow: hidden;
 /* Confirmation */
 
 .confirmation {
-padding: 3rem 2rem 1.5rem;
-text-align: center;
+  padding: 3rem 2rem 1.5rem;
+  text-align: center;
 }
 
 .checkmark {
@@ -173,89 +211,82 @@ text-align: center;
   stroke-linejoin: round;
 }
 
-h1,
-h3,
-.email-btn {
-font-family: "Bebas Neue", sans-serif;
-letter-spacing: 0.08em;
-}
-
 .confirmation h1 {
-margin: 0;
-color: var(--pink);
-font-size: clamp(3rem, 10vw, 4.5rem);
-text-transform: uppercase;
+  margin: 0;
+  color: var(--pink);
+  font-size: clamp(3rem, 10vw, 4.5rem);
+  text-transform: uppercase;
 }
 
 .confirmation h2 {
-margin: 0.3rem 0 1.5rem;
-color: var(--white);
-font-family: "Inter", sans-serif;
-font-size: 1.45rem;
-letter-spacing: 0;
-font-weight: 500;
+  margin: 0.3rem 0 1.5rem;
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 .confirmation p {
-max-width: 460px;
-margin: 0 auto;
-font-size: 1.1rem;
+  max-width: 460px;
+  margin: 0 auto;
+  font-size: 1.1rem;
   line-height: 1.75;
 }
 
 .confirmation-id {
-  font-size: .8rem;
-  color: rgba(255,255,255,.55);
+  margin: 2rem auto 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.8rem;
+  line-height: 1.35;
   text-align: center;
-  margin-top: 2rem;
 }
 
 /* Event Details */
 
 .event-details {
-padding: 2rem 2.25rem 3rem;
+  padding: 2rem 2.25rem 3rem;
 }
 
 .detail-item {
-display: grid;
-grid-template-columns: 44px 1fr;
-gap: 1rem;
-margin-bottom: 1.65rem;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 1rem;
+  margin-bottom: 1.65rem;
   font-size: 1.05rem;
   line-height: 1.5;
 }
 
 .detail-icon {
-width: 38px;
-height: 38px;
-filter:
-drop-shadow(0 0 6px rgba(242, 82, 155, 0.55))
-drop-shadow(0 0 16px rgba(242, 82, 155, 0.3));
+  width: 38px;
+  height: 38px;
+  filter:
+    drop-shadow(0 0 6px rgba(242, 82, 155, 0.55))
+    drop-shadow(0 0 16px rgba(242, 82, 155, 0.3));
 }
 
 .detail-item h3 {
-margin: 0 0 0.25rem;
-color: var(--pink);
-font-size: 1.35rem;
-text-transform: uppercase;
+  margin: 0 0 0.25rem;
+  color: var(--pink);
+  font-size: 1.35rem;
+  text-transform: uppercase;
 }
 
 .detail-item p {
-margin: 0.15rem 0;
-line-height: 1.45;
+  margin: 0.15rem 0;
+  line-height: 1.45;
 }
 
 .detail-item strong {
-color: var(--white);
+  color: var(--white);
 }
 
 .venue-image-wrapper {
   position: relative;
   overflow: hidden;
-  margin-top: 2.75rem;
-
+  width: 100%;
+  margin: 2.75rem auto 0;
   border: 1px solid rgba(242, 82, 155, 0.35);
-
   box-shadow:
     0 0 24px rgba(165, 107, 255, 0.16),
     0 0 40px rgba(242, 82, 155, 0.12);
@@ -265,62 +296,63 @@ color: var(--white);
   content: "";
   position: absolute;
   inset: 0;
-
-  background:
-  linear-gradient(
-    rgba(165, 107, 255, 0.16),
-    rgba(242, 82, 155, 0.12)
-  );
-
   pointer-events: none;
+  background:
+    linear-gradient(
+      rgba(165, 107, 255, 0.16),
+      rgba(242, 82, 155, 0.12)
+    );
 }
 
 .venue-image {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 .venue-caption {
-  margin-top: .75rem;
+  margin-top: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
   text-align: center;
-  color: rgba(255,255,255,.65);
-  font-size: .9rem;
 }
 
 /* Calendar Buttons */
 
 .calendar-section {
-padding: 1.5rem 2.25rem 2.75rem;
-text-align: center;
+  padding: 1.5rem 2.25rem 2.75rem;
+  text-align: center;
 }
 
 .calendar-section p {
-font-size: 1.1rem;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
 .calendar-buttons {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .email-btn {
-display: block;
-padding: 1rem;
-color: var(--black);
-background: linear-gradient(135deg, var(--pink), var(--hot-pink));
-border: 1px solid var(--pink);
-border-radius: 0.35rem;
-text-decoration: none;
-text-transform: uppercase;
-font-size: 1.05rem;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  color: var(--black);
+  background: linear-gradient(135deg, var(--pink), var(--hot-pink));
+  border: 1px solid var(--pink);
+  border-radius: 0.35rem;
+  font-size: 1.05rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .email-btn.secondary {
-color: var(--white);
-background: transparent;
-border: 1px solid rgba(242, 82, 155, 0.65);
+  color: var(--white);
+  background: transparent;
+  border: 1px solid rgba(242, 82, 155, 0.65);
 }
 
 .update-rsvp {
@@ -337,41 +369,34 @@ border: 1px solid rgba(242, 82, 155, 0.65);
 .email-footer {
   position: relative;
   overflow: hidden;
-  width: min(100%, 640px);
-  margin: 0 auto;
   padding: 3.75rem 2rem;
   text-align: center;
-
-  background:
-    linear-gradient(
-    rgba(8, 8, 18, 0.82),
-    rgba(8, 8, 18, 0.88)
-  ),
-  linear-gradient(
-    rgba(165, 107, 255, 0.12),
-    rgba(242, 82, 155, 0.12)
-  ),
-    url("./assets/pexels-pavel-kuznetsov-2150677419-31266655.jpg");
-
-  background-size: cover;
-  background-position: center;
-
   border: 1px solid rgba(242, 82, 155, 0.28);
   border-top: 1px solid rgba(242, 82, 155, 0.35);
+  background:
+    linear-gradient(
+      rgba(8, 8, 18, 0.82),
+      rgba(8, 8, 18, 0.88)
+    ),
+    linear-gradient(
+      rgba(165, 107, 255, 0.12),
+      rgba(242, 82, 155, 0.12)
+    ),
+    url("./assets/pexels-pavel-kuznetsov-2150677419-31266655.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .email-footer::before {
   content: "";
   position: absolute;
   inset: 0;
-
+  pointer-events: none;
   background:
     linear-gradient(
       rgba(165, 107, 255, 0.30),
       rgba(242, 82, 155, 0.22)
     );
-
-  pointer-events: none;
 }
 
 .email-footer > * {
@@ -386,19 +411,19 @@ border: 1px solid rgba(242, 82, 155, 0.65);
   gap: 1.5rem;
   margin: 0 0 2.5rem;
   color: var(--white);
-  font-weight: 800;
   font-size: 1.35rem;
+  font-weight: 800;
 }
 
 .script-text {
-  font-family: "Bigtimes", cursive;
   color: var(--pink);
+  font-family: "Bigtimes", cursive;
   font-size: clamp(3.25rem, 12vw, 5.25rem);
-  line-height: 0.9;
-  letter-spacing: 0;
   font-weight: 400;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
+  line-height: 0.9;
+  letter-spacing: 0;
   transform: rotate(-4deg);
 }
 
@@ -421,7 +446,7 @@ border: 1px solid rgba(242, 82, 155, 0.65);
 .social-links img {
   width: 28px;
   height: 28px;
-
+  opacity: 0.95;
   filter:
     brightness(0)
     saturate(100%)
@@ -431,34 +456,15 @@ border: 1px solid rgba(242, 82, 155, 0.65);
     hue-rotate(303deg)
     brightness(101%)
     contrast(94%);
-
-  opacity: .95;
 }
 
+/* Tablet / Narrow Email Preview */
 
-/* Responsive Refinements */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-body {
-  min-width: 320px;
-}
-
-.preheader,
-main,
-.email-footer {
-  width: min(100%, 640px);
-}
-
-/* Tablet / narrow email preview */
 @media (max-width: 640px) {
   .preheader {
-    font-size: 0.85rem;
     gap: 0.9rem;
     padding: 0.8rem 0.75rem;
+    font-size: 0.85rem;
   }
 
   .email-hero {
@@ -471,14 +477,14 @@ main,
   }
 
   .logo-script {
-    font-size: clamp(4.75rem, 19vw, 7rem);
     margin-left: 0.2em;
+    font-size: clamp(4.75rem, 19vw, 7rem);
   }
 
   .logo-year {
-    font-size: clamp(1.8rem, 6vw, 3rem);
     right: 0.45em;
     bottom: -0.72em;
+    font-size: clamp(1.8rem, 6vw, 3rem);
   }
 
   .confirmation {
@@ -508,16 +514,32 @@ main,
     gap: 0.9rem;
   }
 
+  .update-rsvp {
+    display: block;
+    max-width: 280px;
+    margin: 1.5rem auto 0;
+    text-align: center;
+  }
+
+  .confirmation-id {
+    max-width: 280px;
+  }
+
+  .confirmation-id span {
+    display: block;
+  }
+
   .email-footer {
     padding: 3rem 1.5rem;
   }
 }
 
-/* Small phones */
+/* Small Phones */
+
 @media (max-width: 420px) {
   .preheader {
-    font-size: 0.78rem;
     gap: 0.65rem;
+    font-size: 0.78rem;
   }
 
   .email-hero {
@@ -529,15 +551,15 @@ main,
   }
 
   .logo-script {
-    font-size: clamp(4rem, 20vw, 5.25rem);
     margin-top: -0.16em;
     margin-left: 0.18em;
+    font-size: clamp(4rem, 20vw, 5.25rem);
   }
 
   .logo-year {
-    font-size: clamp(1.5rem, 7vw, 2.25rem);
     right: 0.45em;
     bottom: -0.7em;
+    font-size: clamp(1.5rem, 7vw, 2.25rem);
   }
 
   .checkmark {
@@ -566,8 +588,8 @@ main,
   }
 
   .email-btn {
-    font-size: 0.95rem;
     padding: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .script-text {
@@ -575,11 +597,29 @@ main,
   }
 }
 
-/* Extra tiny phones */
+/* Extra Tiny Phones */
+
 @media (max-width: 320px) {
   .preheader {
     flex-wrap: wrap;
     row-gap: 0.35rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  main,
+  .email-footer {
+    border-left: none;
+    border-right: none;
+  }
+
+  .email-hero,
+  .confirmation,
+  .event-details,
+  .calendar-section,
+  .email-footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .logo-top {
@@ -587,72 +627,18 @@ main,
   }
 
   .logo-script {
-    font-size: 3.65rem;
+    font-size: 3.35rem;
+    margin-left: 0.12em;
+    transform: rotate(-5deg) scale(0.9);
+    transform-origin: center;
   }
 
-  .confirmation h1 {
-    font-size: 2.5rem;
+  .logo-year {
+    right: 0.25em;
   }
 
-  .event-details,
-  .calendar-section,
-  .confirmation {
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
+  .detail-item {
+    grid-template-columns: 30px 1fr;
+    gap: 0.65rem;
   }
-}
-
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.preheader,
-main,
-.email-footer {
-  width: 100%;
-  max-width: 640px;
-}
-
-.email-logo,
-.logo-top,
-.logo-script,
-.logo-year,
-.script-text,
-.footer-signoff,
-.update-rsvp,
-.confirmation-id {
-  max-width: 100%;
-}
-
-.calendar-section {
-  text-align: center;
-}
-
-.calendar-buttons {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.email-btn {
-  width: 100%;
-}
-
-.venue-image-wrapper {
-  width: 100%;
-  max-width: 100%;
-  margin: 2.75rem auto 0;
-}
-
-.venue-image {
-  display: block;
-  width: 100%;
-  height: auto;
 }
