@@ -41,11 +41,12 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding: 2rem;
+  padding: 2rem 1.25rem;
 }
 
 .confirmation-card {
-  width: min(92vw, 650px);
+  width: 100%;
+  max-width: 650px;
   margin: 0 auto;
   padding: 4rem 3rem;
   text-align: center;
@@ -206,13 +207,20 @@ h1 {
 
 @media (max-width: 600px) {
 
+  .confirmation-page {
+    padding: 1.25rem;
+  }
+
   .confirmation-card {
+    width: 100%;
+    max-width: 100%;
     padding: 3rem 1.5rem;
   }
 
   .button-group {
     flex-direction: column;
-  }
+
+}
 
 }
 
