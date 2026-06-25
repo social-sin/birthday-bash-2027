@@ -1,226 +1,221 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&display=swap');
 
 @font-face {
-  font-family: "Bigtimes";
-  src: url("./assets/Bigtimes.otf") format("opentype");
+	font-family: "Bigtimes";
+	src: url("./assets/Bigtimes.otf") format("opentype");
 }
 
 :root {
-  --black: #080812;
-  --purple: #25112f;
-  --pink: #f2529b;
-  --hot-pink: #ff3f91;
-  --lavender: #a56bff;
-  --white: #ffffff;
+	--black: #080812;
+	--purple: #25112f;
+	--pink: #f2529b;
+	--hot-pink: #ff3f91;
+	--lavender: #a56bff;
+	--white: #ffffff;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  overflow-x: hidden;
+	margin: 0;
+	min-height: 100vh;
+	overflow-x: hidden;
 
-  font-family: "Inter", sans-serif;
-  color: var(--white);
+	font-family: "Inter", sans-serif;
+	color: var(--white);
 
-  background:
-    linear-gradient(
-      rgba(8,8,18,.45),
-      rgba(8,8,18,.92)
-    ),
-    url("./assets/Purple Vegas.png");
+	background:
+		linear-gradient(rgba(8, 8, 18, .45),
+			rgba(8, 8, 18, .92)),
+		url("./assets/Purple Vegas.png");
 
-  background-size: cover;
-  background-position: center;
+	background-size: cover;
+	background-position: center;
 }
 
 .confirmation-page {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 2rem 1.25rem;
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	padding: 2rem 1.25rem;
 }
 
 .confirmation-card {
-  width: 100%;
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 4rem 3rem;
-  text-align: center;
+	width: 100%;
+	max-width: 650px;
+	margin: 0 auto;
+	padding: 4rem 3rem;
+	text-align: center;
 
-  background:
-    radial-gradient(
-      circle at top,
-      rgba(242,82,155,.18),
-      transparent 45%
-    ),
-    rgba(8,8,18,.88);
+	background:
+		radial-gradient(circle at top,
+			rgba(242, 82, 155, .18),
+			transparent 45%),
+		rgba(8, 8, 18, .88);
 
-  border: 1px solid rgba(242,82,155,.35);
-  box-shadow: 0 0 40px rgba(242,82,155,.15);
-  backdrop-filter: blur(8px);
+	border: 1px solid rgba(242, 82, 155, .35);
+	box-shadow: 0 0 40px rgba(242, 82, 155, .15);
+	backdrop-filter: blur(8px);
 }
 
 .checkmark {
-  width: 82px;
-  height: 82px;
-  margin: 0 auto 1.5rem;
+	width: 82px;
+	height: 82px;
+	margin: 0 auto 1.5rem;
 
-  display: grid;
-  place-items: center;
+	display: grid;
+	place-items: center;
 
-  border: 3px solid var(--pink);
-  border-radius: 999px;
+	border: 3px solid var(--pink);
+	border-radius: 999px;
 
-  box-shadow:
-    0 0 10px rgba(242, 82, 155, 0.55),
-    0 0 28px rgba(242, 82, 155, 0.28);
+	box-shadow:
+		0 0 10px rgba(242, 82, 155, 0.55),
+		0 0 28px rgba(242, 82, 155, 0.28);
 }
 
 .checkmark svg {
-  width: 54px;
-  height: 54px;
+	width: 54px;
+	height: 54px;
 }
 
 .checkmark path {
-  fill: none;
-  stroke: var(--pink);
-  stroke-width: 6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+	fill: none;
+	stroke: var(--pink);
+	stroke-width: 6;
+	stroke-linecap: round;
+	stroke-linejoin: round;
 }
 
 .eyebrow {
-  margin: 0;
-  color: var(--lavender);
+	margin: 0;
+	color: var(--lavender);
 
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: .12em;
+	font-family: "Bebas Neue", sans-serif;
+	letter-spacing: .12em;
 }
 
 h1 {
-  margin: .5rem 0 1rem;
+	margin: .5rem 0 1rem;
 
-  font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(3rem, 8vw, 5rem);
+	font-family: "Bebas Neue", sans-serif;
+	font-size: clamp(3rem, 8vw, 5rem);
 
-  letter-spacing: .05em;
-  text-transform: uppercase;
+	letter-spacing: .05em;
+	text-transform: uppercase;
 }
 
 .intro {
-  font-size: 1.15rem;
-  line-height: 1.7;
+	font-size: 1.15rem;
+	line-height: 1.7;
 }
 
 .details {
-  margin-top: 1rem;
-  color: rgba(255,255,255,.8);
+	margin-top: 1rem;
+	color: rgba(255, 255, 255, .8);
 }
 
 .button-group {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
 
-  margin-top: 2rem;
+	margin-top: 2rem;
 }
 
 .primary-btn,
 .secondary-btn {
-  text-decoration: none;
+	text-decoration: none;
 
-  padding: 1rem 1.5rem;
+	padding: 1rem 1.5rem;
 
-  border-radius: .35rem;
+	border-radius: .35rem;
 
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: .08em;
+	font-family: "Bebas Neue", sans-serif;
+	letter-spacing: .08em;
 }
 
 .email-preview-link {
-  display: inline-block;
-  margin-top: 1.25rem;
-  color: rgba(255,255,255,.8);
-  font-size: 0.8rem;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+	display: inline-block;
+	margin-top: 1.25rem;
+	color: rgba(255, 255, 255, .8);
+	font-size: 0.8rem;
+	text-decoration: underline;
+	text-underline-offset: 4px;
 }
 
 .email-preview-link:link,
 .email-preview-link:visited {
-  color: rgba(255,255,255,.8);
+	color: rgba(255, 255, 255, .8);
 }
 
 .email-preview-link:hover,
 .email-preview-link:focus {
-  color: var(--pink);
+	color: var(--pink);
 }
 
 .email-preview-link:active {
-  color: var(--lavender);
+	color: var(--lavender);
 }
 
 .secondary-btn {
-  display: inline-block;
-  color: var(--white);
-  text-decoration: none;
+	display: inline-block;
+	color: var(--white);
+	text-decoration: none;
 
-  padding: 1rem 1.5rem;
-  border-radius: .35rem;
-  border: 1px solid rgba(242,82,155,.65);
+	padding: 1rem 1.5rem;
+	border-radius: .35rem;
+	border: 1px solid rgba(242, 82, 155, .65);
 
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: .08em;
+	font-family: "Bebas Neue", sans-serif;
+	letter-spacing: .08em;
 
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease;
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		background 0.25s ease,
+		color 0.25s ease,
+		border-color 0.25s ease;
 }
 
 .secondary-btn:link,
 .secondary-btn:visited {
-  color: var(--white);
+	color: var(--white);
 }
 
 .secondary-btn:hover,
 .secondary-btn:focus {
-  color: var(--black);
-  background: linear-gradient(135deg, var(--pink), var(--hot-pink));
-  border-color: var(--pink);
-  transform: translateY(-3px);
-  box-shadow:
-    0 0 12px rgba(242, 82, 155, 0.55),
-    0 0 28px rgba(242, 82, 155, 0.35);
+	color: var(--black);
+	background: linear-gradient(135deg, var(--pink), var(--hot-pink));
+	border-color: var(--pink);
+	transform: translateY(-3px);
+	box-shadow:
+		0 0 12px rgba(242, 82, 155, 0.55),
+		0 0 28px rgba(242, 82, 155, 0.35);
 }
 
 .secondary-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 0 6px rgba(242, 82, 155, 0.45);
+	transform: translateY(0);
+	box-shadow: 0 0 6px rgba(242, 82, 155, 0.45);
 }
 
 @media (max-width: 600px) {
 
-  .confirmation-page {
-    padding: 1.25rem;
-  }
+	.confirmation-page {
+		padding: 1.25rem;
+	}
 
-  .confirmation-card {
-    width: 100%;
-    max-width: 100%;
-    padding: 3rem 1.5rem;
-  }
+	.confirmation-card {
+		width: 100%;
+		max-width: 100%;
+		padding: 3rem 1.5rem;
+	}
 
-  .button-group {
-    flex-direction: column;
+	.button-group {
+		flex-direction: column;
+
+	}
 
 }
-
-}
-
